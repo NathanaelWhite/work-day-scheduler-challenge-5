@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -28,14 +28,77 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
+    <main class="container">
       <!-- Timeblocks go here -->
-      <!-- create timeblock structure in the html using bootstrap rows and columns -->
-      <!-- add onclick events (.on) so that it creates a new textarea when clicked -->
-      <!-- create a saveEvent function to add inputs to localStorage -->
+      <div class="row time-block">
+        <div class="col-2 border border-dark">9AM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">10AM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">11AM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">12PM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">1PM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">2PM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">3PM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">4PM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+      <div class="row time-block">
+        <div class="col-2 border border-dark">5PM</div>
+
+          <textarea class="col-8 border border-dark form-control"></textarea>
+
+        <div class="col-2 border border-dark">icons</div>
+      </div>
+    </main>
+
+      <!-- create a saveEvent function to add inputs to localStorage and saves them on refresh -->
       <!-- call the saveEvent func every time the user edits an event textarea and clicks the save button -->
       <!-- use moment.js to set colors for events either in the past or coming up soon. GOOGLE movement more -->
-    </div>
+      <!-- add icons to the saveEvent function using API -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
