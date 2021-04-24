@@ -11,7 +11,7 @@ var saveButton = $("#save-btn");
   //array that contains the times we need
 var workHours =[9,10,11,12,13,14,15,16,17];
 
-function displayBlock(){
+function displayBlock() {
 
   /*
   <div class="row time-block" id="eventHour">
@@ -45,10 +45,10 @@ function displayBlock(){
 
   var textarea=$("<textarea>")
   if(workHours[i]==currentHour){
-    textarea.attr("class","col-10 description border border-top-dark present");
+    textarea.attr("class","eventtext col-10 description border border-top-dark present");
   }
   if(workHours[i]<currentHour)
-  {textarea.attr("class","col-10 description border border-top-dark past");}
+  {textarea.attr("class","eventText col-10 description border border-top-dark past");}
   if(workHours[i]>currentHour)
   {textarea.attr("class","eventText col-10 description border border-top-dark future");}
 
@@ -72,23 +72,42 @@ function displayBlock(){
 
   $(".saveBtn").click(function () {
    //grab hour
-    console.log($(this));
-    //grab userinput
-    
+   var hour = $(this).attr("id");
+    console.log(hour);
+    //grab eventText
+    var eventText = $(this).siblings("textarea").val();
+    console.log(eventText);
     //set to local storage
-    //hour = userinput
 
+    //hour = userinput(eventText)
+    saveEvents(hour, eventText);
     //9=test
     //10= helo
   });
 
 
-
-
+// loadEvents();
+loadEvents();
+}
+var loadEvents = function() {
+  for(var i=0; i<workHours.length;i++) {
+    var key = workHours[i].toString();
+    $("#hour-"+key).val(localStorage.getItem(key));
+    console.log(key);
+  };
 }
 
+var saveEvents = function (key, input) { 
+  if (input === "") {
+      return;
+  } else {
+    localStorage.setItem(key, input);
+  }
+};
+
+
 //get to localstorage
-$("#hour-9").val("test");
+// $("#hour-9").val("test");
 
 
 
