@@ -12,5 +12,7 @@ An application that lets the user plan out the average work day (9-5). When the 
 * Moment.js
 
 ## Website
+![image](https://user-images.githubusercontent.com/77940998/115967200-d6590380-a4f6-11eb-91e0-76b8dd05ba68.png)
 
 ## Link
+https://nathanaelwhite.github.io/work-day-scheduler-challenge-5/
