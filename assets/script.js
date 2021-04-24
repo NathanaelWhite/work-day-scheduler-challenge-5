@@ -3,10 +3,10 @@ var saveButton = $("#save-btn");
 //1. momentjs
   //currentTime
   var currentTime= moment().format('MMMM Do YYYY, h:mm:ss a');
-  console.log(currentTime)
+  // console.log(currentTime)
   $("#currentDay").text(currentTime);
   var currentHour=moment().format("HH");
-  console.log(currentHour);
+  // console.log(currentHour);
 
   //array that contains the times we need
 var workHours =[9,10,11,12,13,14,15,16,17];
@@ -74,7 +74,7 @@ function displayBlock(){
    //grab hour
     console.log($(this));
     //grab userinput
-
+    
     //set to local storage
     //hour = userinput
 
